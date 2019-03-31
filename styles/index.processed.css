@@ -1,3 +1,5 @@
+
+
 body {
   background: var(--bear-belly, rgb(100,200,100));
 }
@@ -30,6 +32,16 @@ body {
   height: 40%;
   border-radius: 50%;
 }
+.inner-ear-left {
+  top: 5%;
+  left: 0%;
+  background: black;
+  width: 20%;
+  height: 15%;
+  border-radius: 70% 70% 0% 0%;
+  transform: rotate(-45deg);
+
+}
 .ear-right {
   top: -5%;
   left: 65%;
@@ -38,7 +50,16 @@ body {
   height: 40%;
   border-radius: 50%;
 }
+.inner-ear-right {
+  top: 5%;
+  left: 80%;
+  background: black;
+  width: 20%;
+  height: 15%;
+  border-radius: 70% 70% 0% 0%;
+  transform: rotate(45deg);
 
+}
 
 
 
@@ -51,6 +72,19 @@ body {
   border-radius: 50%;
 }
 
+.right-eyelid {
+  top: 35%;
+  left: 55%;
+  background: var(--bear-skin,blue);
+  width: 15%;
+  height: 17%;
+  border-radius: 50%;
+  animation-name: blink;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+}
+
 .left-eye {
   top: 35%;
   left: 30%;
@@ -58,6 +92,19 @@ body {
   width: 15%;
   height: 17%;
   border-radius: 50%;
+}
+
+.left-eyelid {
+  top: 35%;
+  left: 30%;
+  background: var(--bear-skin,blue);
+  width: 15%;
+  height: 17%;
+  border-radius: 50%;
+  animation-name: blink;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
 }
 
 .sparkle {
@@ -89,4 +136,14 @@ body {
 
 .bear * {
   position: absolute;
+}
+
+@keyframes blink {
+    15% {
+     top:5%;
+    }
+    100% {
+     top:2%;
+    }
+
 }
